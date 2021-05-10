@@ -1,6 +1,7 @@
 package com.vanniktech.rxriddles
 
 import io.reactivex.rxjava3.core.Observable
+import io.reactivex.rxjava3.core.Single
 
 object Riddle21 {
   /**
@@ -9,6 +10,6 @@ object Riddle21 {
    * Use case: Sometimes you can't do everything reactively and need to break out of it.
    */
   fun solve(source: Observable<Int>): Int {
-    TODO()
+    return source.blockingFirst()
   }
 }
